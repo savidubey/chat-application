@@ -286,7 +286,7 @@ This project is created for educational purposes. Feel free to use, modify, and 
 
 ## 👤 Author
 
-**Vedant Kapgate**
+**Savi Dubey , Shilpa Rathod**
 
 ## 🙏 Acknowledgments
 
