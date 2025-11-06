@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-User Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar with user selection -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Chat Application</h2>
+                <p>Switch between users to chat</p>
+                <input type="text" id="searchMessages" placeholder="🔍 Search messages...">
+            </div>
+            
+            <div class="user-selection">
+                <h3>Select Active User</h3>
+                <div class="user-buttons">
+                    <button class="user-btn" id="user1Btn">
+                        <div class="user-avatar user1">
+                            <img src="savi.jpg" alt="Savi" class="avatar-img">
+                        </div>
+                        <div class="user-info">
+                            <h4>Savi</h4>
+                            <p>Click to chat as Savi</p>
+                        </div>
+                    </button>
+                    <button class="user-btn" id="user2Btn">
+                        <div class="user-avatar user2">
+                            <img src="shilpa.jpg" alt="Shilpa" class="avatar-img">
+                        </div>
+                        <div class="user-info">
+                            <h4>Shilpa</h4>
+                            <p>Click to chat as Shilpa</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h4>How to Use</h4>
+                <p>1. Select a user from the left panel</p>
+                <p>2. Type your message in the input field</p>
+                <p>3. Press Enter or click the send button</p>
+                <p>4. Switch to the other user to reply</p>
+            </div>
+        </div>
+        
+        <!-- Main chat area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="chat-header-avatar user1" id="currentUserAvatar">
+                    <span id="avatarText">SV</span>
+                    <img id="avatarImage" src="" alt="" class="avatar-img">
+                    <span class="online-indicator" id="onlineIndicator"></span>
+                </div>
+                <div class="chat-header-info">
+                    <h3 id="currentUserName">Savi</h3>
+                    <p id="currentUserStatus">Active - You are chatting as this user</p>
+                    <p id="typingIndicator" class="typing-indicator">
+                        <span class="typing-dots">
+                            <span></span><span></span><span></span>
+                        </span>
+                        Typing...
+                    </p>
+                </div>
+                <button id="muteButton" class="mute-btn" title="Mute/Unmute Sounds">🔔</button>
+                <button id="clearChatBtn" class="clear-btn" title="Clear Chat">🗑️</button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="empty-chat">
+                    <h3>No messages yet</h3>
+                    <p>Start the conversation by sending a message!</p>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <button id="attachButton" class="attach-btn" title="Attach Image">📎</button>
+                <input type="file" id="fileInput" accept="image/*">
+                <button id="emojiButton" class="emoji-btn" title="Add Emoji">😊</button>
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button id="sendButton">
+                    <i>➤</i>
+                </button>
+            </div>
+            <div class="emoji-picker" id="emojiPicker">
+                <div class="emoji-grid">
+                    <span class="emoji">😊</span>
+                    <span class="emoji">😂</span>
+                    <span class="emoji">❤️</span>
+                    <span class="emoji">👍</span>
+                    <span class="emoji">🎉</span>
+                    <span class="emoji">😍</span>
+                    <span class="emoji">🤔</span>
+                    <span class="emoji">👋</span>
+                    <span class="emoji">😢</span>
+                    <span class="emoji">😎</span>
+                    <span class="emoji">🔥</span>
+                    <span class="emoji">💯</span>
+                    <span class="emoji">🙏</span>
+                    <span class="emoji">😴</span>
+                    <span class="emoji">🤗</span>
+                    <span class="emoji">😜</span>
+                    <span class="emoji">💪</span>
+                    <span class="emoji">✨</span>
+                    <span class="emoji">🌟</span>
+                    <span class="emoji">⭐</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
